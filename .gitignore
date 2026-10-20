@@ -1,0 +1,8 @@
+node_modules
+dist
+*.local
+tools/shots
+.playwright
+tools/probe.log
+.mixamo-profile
+tools/*.log

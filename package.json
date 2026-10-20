@@ -1,0 +1,32 @@
+{
+  "name": "siren",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview",
+    "shot": "node tools/screenshot.mjs",
+    "test": "vitest run",
+    "check:render": "node tools/check-render.mjs",
+    "check": "npm run typecheck && npm run test && npm run build && npm run check:render && npm run check:anim",
+    "anim:index": "node tools/anim-index.mjs",
+    "check:anim": "node tools/check-anim.mjs",
+    "mixamo:login": "node tools/mixamo-login.mjs",
+    "mixamo:probe": "node tools/mixamo-probe.mjs",
+    "mixamo:fetch": "node tools/mixamo-fetch.mjs",
+    "anim:sheet": "node tools/anim-sheet.mjs"
+  },
+  "dependencies": {
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.185.4",
+    "playwright": "^1.49.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}
